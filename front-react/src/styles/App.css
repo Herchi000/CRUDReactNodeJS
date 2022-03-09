@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    background-color: rgb(216, 233, 252);
+}
+
+.container{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    margin: 10px auto 0;
+    
+}
+
+
+
+.tableUsers{
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 3px solid #555;
+    margin-top: 10px;
+}
+
+.tableUsers th, .tableUsers td{
+    padding: 10px;
+    border-bottom: 2px solid #aaa;
+}
+
+.btn-edit, .btn-delete, .btn-add, .btn-submit{
+    padding: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.btn-add, .btn-submit{
+    background-color: rgb(59, 86, 238);
+}
+
+.btn-edit{
+    background-color: rgb(49, 221, 72);
+}
+
+.btn-delete{
+    background-color: rgb(221, 49, 49);   
+}
+
+.btn-edit:hover{
+    cursor: pointer;
+    color: rgb(49, 221, 72);
+    background-color: #fff;
+}
+
+.btn-delete:hover{
+    cursor: pointer;
+    color: rgb(221, 49, 49);  
+    background-color: #fff;
+}
+
+.btn-add:hover, .btn-submit:hover{
+    cursor: pointer;
+    color: rgb(59, 86, 238);
+    background-color: #fff;
+}
+
+
+/*Forms*/
+
+.newUser{
+    display: flex;
+    width: 400px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nameCamp, .ageCamp{
+    display: flex;
+    flex-direction: column;
+}
+
+.label{
+    font-size: 18px;
+    margin: 10px;
+}
+
+.input{
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.submit{
+    
+}

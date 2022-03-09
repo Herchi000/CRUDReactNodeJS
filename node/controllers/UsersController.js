@@ -12,15 +12,19 @@ export const getUsers = (req, res) => {
     })
 }
 
+
+
+
 export const createUser = (req, res) => {
+    console.log(req.body);
     const sql = `INSERT INTO users(nombre, edad) VALUES('${req.body.name}', ${req.body.age})`;
     const data = req.body;
-    connection.query(sql, (err, result) => {
+    connection.query(sql, data, (err, result) => {
         if(err){
             console.log('Error al agregar el usuario a la DB: ',err);
         }else{
             console.log('Usuario Registrado');
-            res.redirect('/users/all');
+            res.send(result);
         }
     })
 }
