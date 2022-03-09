@@ -12,7 +12,18 @@ export const getUsers = (req, res) => {
     })
 }
 
-
+export const getUser = (req, res) => {
+    console.log('Soy el getUser')
+    const sql = `SELECT * FROM users WHERE id=${req.body.id}`;
+    connection.query(sql, (err, result) => {
+        if(err){
+            console.log('Ha ocurrido un error: ', err);
+        } else{
+            console.log(result);
+            res.send(result);
+        }
+    })
+}
 
 
 export const createUser = (req, res) => {
@@ -37,7 +48,7 @@ export const updateUser = (req, res) => {
             console.log('Ha ocurrido un error al actualizar la DB: ', err);
         } else {
             console.log('Usuario Actualizado');
-            res.redirect('/users/all');
+            res.send(result);
         }
     })
 }
@@ -50,7 +61,7 @@ export const deleteUser = (req, res) => {
             console.log('Ha ocurrido un error al eliminar desde la DB: ', err);
         } else{
             console.log('Usuario Eliminado Correctamente');
-            res.redirect('/users/all');
+            res.send(result);
         }
     })
 }

@@ -24,7 +24,6 @@ const EditUser = () => {
         e.preventDefault();
 
         await axios.put(`${URI}update/${id}`, {name:name, age:age})
-        .then((res) => console.log(res))
         .catch((e) => console.log(e))
 
         navigate('/');
