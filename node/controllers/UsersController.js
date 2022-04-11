@@ -6,7 +6,6 @@ export const getUsers = (req, res) => {
         if(err){
             console.log('Ha ocurrido un error: ', err);
         } else{
-            console.log(result);
             res.send(result);
         }
     })
@@ -19,7 +18,6 @@ export const getUser = (req, res) => {
         if(err){
             console.log('Ha ocurrido un error: ', err);
         } else{
-            console.log(result);
             res.send(result);
         }
     })
